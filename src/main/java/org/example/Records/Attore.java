@@ -6,7 +6,5 @@ public record Attore(
         String lastName,
         int age
 ) {
-    public void nomeComple(){
-        System.out.println(firstName() + " " + lastName());
-    }
+
 }
