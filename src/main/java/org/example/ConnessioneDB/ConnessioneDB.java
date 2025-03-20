@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class ConnessioneDB {
 
     private static final String URL = "jdbc:mysql://localhost:3306/sakila";
-    private static final String USERNAME = System.getenv("USER");
+    private static final String USERNAME = System.getenv("USERNAME");
     private static final String PASSWORD = System.getenv("PASSWORD");
     private static Connection connection;
 
@@ -20,7 +20,9 @@ public class ConnessioneDB {
         }
     }
 
-    public static void getConnection() throws SQLException {
-        connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+    public static Connection getConnection() throws SQLException {
+        if(connection == null)
+            connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
+        return connection;
     }
 }
