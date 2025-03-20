@@ -13,7 +13,7 @@ public class Main {
     public static void main(String[] args) {
         try {
             Attore a = AttoreCrud.getActorById(1);
-            System.out.println(a.toString());
+            System.out.println(a);
         } catch (SQLException e){
             e.printStackTrace();
         }
