@@ -21,6 +21,9 @@ public class Main {
 
             List<Attore> la = AttoreCrud.getActorsByNamePS("AUDREY");
             la.forEach(System.out::println);
+
+            la = AttoreCrud.getActorsByNameS("ALBERT");
+            la.forEach(System.out::println);
         } catch (SQLException e){
             e.printStackTrace();
         }

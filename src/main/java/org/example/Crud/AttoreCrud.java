@@ -57,10 +57,10 @@ public class AttoreCrud {
     public static List<Attore> getActorsByNamePS(String firstName) throws SQLException{
         List<Attore> la = new ArrayList<>();
         Connection c = ConnessioneDB.getConnection();
-        String query = "SELECT * FROM actor WHERE first_name = ?";
+        String query = "SELECT * FROM actor WHERE first_name = ?;";
         PreparedStatement pst  = c.prepareStatement(query);
         pst.setString(1, firstName);
-        ResultSet response = pst.executeQuery(query);
+        ResultSet response = pst.executeQuery();
         while(response.next()){
             la.add(new Attore(response.getInt("actor_id"),
                     response.getString("first_name"),
