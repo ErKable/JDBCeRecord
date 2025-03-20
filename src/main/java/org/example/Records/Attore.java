@@ -3,8 +3,5 @@ package org.example.Records;
 public record Attore(
         long actorId,
         String firstName,
-        String lastName,
-        int age
-) {
-
-}
+        String lastName
+) {}
