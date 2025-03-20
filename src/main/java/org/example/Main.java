@@ -14,6 +14,9 @@ public class Main {
         try {
             Attore a = AttoreCrud.getActorById(1);
             System.out.println(a);
+
+            Attore a2 = AttoreCrud.getActorByIdPreparedStatement(34);
+            System.out.println(a2);
         } catch (SQLException e){
             e.printStackTrace();
         }
